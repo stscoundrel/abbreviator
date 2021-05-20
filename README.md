@@ -1,10 +1,10 @@
-# Abbreviator
+# Abbreviatrix
 
 Wraps searched word with '<abbr>' tags in content. For adding html-friendly info to heavily abbreviated text.
 
 ### Install
 
-`yarn add abbreviator`
+`yarn add abbreviatrix`
 
 ## Motivation
 
@@ -15,7 +15,7 @@ Should you have list of abbreviations, you can use abbreviator to search/replace
 ##### Usage
 
 ```javascript
-import { abbreviate } from 'abbreviator'
+import { abbreviate } from 'abbreviatrix'
 
 // From Cleasby & Vigfusson dictionary.
 const original = 'kunnátta = f. knowledge, Edda (pref.), freq. in mod. usage: as also of knowing by heart';
