@@ -1,6 +1,6 @@
 # Abbreviatrix
 
-Wraps searched word with '<abbr>' tags in content. For adding html-friendly info to heavily abbreviated text.
+Wraps searched word with 'abbr' tags in content. For adding html-friendly info to heavily abbreviated text.
 
 ### Install
 
