@@ -1,11 +1,32 @@
 import { abbreviate } from '../src';
 
 describe('Abbreviator tests', () => {
-  test('Throws error on missing argument', () => {
+  test('Throws error on missing argument -> abbreviation', () => {
+    expect(() => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      abbreviate(undefined as any, 'explanation', 'content');
+    }).toThrow('Missing argument: expects three strings as function arguments');
+  });
+
+  test('Throws error on missing argument -> explanation', () => {
+    expect(() => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      abbreviate('abbreviation', undefined as any, 'content');
+    }).toThrow('Missing argument: expects three strings as function arguments');
+  });
+
+  test('Throws error on missing argument -> content', () => {
+    expect(() => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      abbreviate('abbreviation', 'explanation', undefined as any);
+    }).toThrow('Missing argument: expects three strings as function arguments');
+  });
+
+  test('Throws error on missing argument -> all', () => {
     expect(() => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       abbreviate(undefined as any, undefined as any, undefined as any);
-    }).toThrow('Missing argument: expects two strings as function arguments');
+    }).toThrow('Missing argument: expects three strings as function arguments');
   });
 
   test('Handles empty abbr correctly', () => {
