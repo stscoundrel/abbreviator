@@ -60,4 +60,11 @@ describe('Abbreviator tests', () => {
     const result = abbreviate('f.', 'feminine', original);
     expect(result).toEqual(expected);
   });
+
+  test('Does not abbreviate content inside html tags.', () => {
+    const original = 'pres. l. spyr, spyrjum, <abbr title="plural">pl.</abbr> spurði';
+    const expected = 'pres. <abbr title="line">l.</abbr> spyr, spyrjum, <abbr title="plural">pl.</abbr> spurði';
+    const result = abbreviate('l.', 'line', original);
+    expect(result).toEqual(expected);
+  });
 });
