@@ -1,6 +1,6 @@
 const createRegexFor = (abbreviation) => {
   const escapedAbbreviation = abbreviation.replace('.', '\\.');
-  return new RegExp(`(${escapedAbbreviation})(?![^<>]*<\/)`, 'gi'); // eslint-disable-line
+  return new RegExp(`(${escapedAbbreviation})(?![^<>]*<\/)(?<!=")(?!">)`, 'gi'); // eslint-disable-line
 };
 
 export const abbreviate = (abbreviation: string, explanation: string, content: string): string => {

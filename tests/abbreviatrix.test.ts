@@ -67,4 +67,11 @@ describe('Abbreviator tests', () => {
     const result = abbreviate('l.', 'line', original);
     expect(result).toEqual(expected);
   });
+
+  test('Does not abbreviate content inside html attributes.', () => {
+    const original = 'pres. n. <abbr title="modern.">mod.</abbr>';
+    const expected = 'pres. <abbr title="neuter">n.</abbr> <abbr title="modern.">mod.</abbr>';
+    const result = abbreviate('n.', 'neuter', original);
+    expect(result).toEqual(expected);
+  });
 });
