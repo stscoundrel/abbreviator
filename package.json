@@ -1,6 +1,6 @@
 {
   "name": "abbreviatrix",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Wraps searched word with 'abbr' tags in content.",
   "repository": "https://github.com/stscoundrel/abbreviatrix.git",
   "author": "stscoundrel <silvennoinen.sampo@gmail.com>",
